@@ -24,14 +24,14 @@ fn main() {
             // if neither of the above match then we quit and return zero
             println!("{}", &convert_type);
             println!("Error, not acceptable input.");
-            break 0;
+            break 0.0;
         }
 
         // tries to get a number from the user
         io::stdin().read_line(& mut input)
             .expect("Failed to read line.");
         // if you did not supply a good number it tries again
-        let input: i32 = match input.trim().parse() {
+        let input: f64 = match input.trim().parse() {
             // if its ok then it returns it
             Ok(num) => num,
             // otherwise it asks again
@@ -43,10 +43,10 @@ fn main() {
     };
 
     if convert_type == "c"{
-        let final_temp = (number - 32) * 5/9;
+        let final_temp = (number - 32.0) * 5.0/9.0;
         println!("The temp in cel for {} in far is {}", number, final_temp)
     }else if convert_type == "f" {
-        let final_temp = (number * 9/5) + 32;
+        let final_temp = (number * 9.0/5.0) + 32.0;
         println!("The temp in far for {} in cel is {}", number, final_temp)
     }
 
