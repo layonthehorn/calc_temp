@@ -22,7 +22,6 @@ fn main() {
             println!("Enter a temp to convert to Far. ");
         }else{
             // if neither of the above match then we quit and return zero
-            println!("{}", &convert_type);
             println!("Error, not acceptable input.");
             break 0.0;
         }
